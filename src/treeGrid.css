@@ -8,7 +8,7 @@
 
 
 
-.tree-grid-animate-enter,
+/*.tree-grid-animate-enter,
 .tree-grid-row.ng-enter {
   transition: 200ms linear all;
   position: relative;
@@ -36,7 +36,7 @@
   height: 0px;
   max-height:0px;
   opacity: 0;
-}
+}*/
 
 
 /* 
@@ -45,12 +45,12 @@ Angular 1.2.0 Animation
 */
 
 
-.tree-grid-animate.ng-enter{
+/*.tree-grid-animate.ng-enter{
 
 }
 .tree-grid-animate.ng-enter{
 
-}
+}*/
 
 
 
