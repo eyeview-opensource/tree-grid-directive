@@ -40,7 +40,8 @@
           expandOn:'=',
           onSelect: '&',
           initialSelection: '@',
-          treeControl: '='
+          treeControl: '=',
+          canLoad: '&'
         },
         link: function(scope, element, attrs) {
           var error, expandingProperty, expand_all_parents, expand_level, for_all_ancestors, for_each_branch, get_parent, n, on_treeData_change, select_branch, selected_branch, tree;
