@@ -106,7 +106,6 @@
             scope.colDefinitions = _col_defs;
           }
           else{
-            console.log(scope.colDefs);
             scope.colDefinitions = scope.colDefs;
           }
 
