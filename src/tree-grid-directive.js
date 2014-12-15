@@ -56,6 +56,15 @@
             return void 0;
           };
 
+          //Start omri's sort code
+          scope.orderByField = 'branch.name';
+          scope.reverseSort = false;
+          scope.setOrder = function (value) {
+              scope.orderByField = 'branch.' + value;
+              scope.reverseSort = !scope.reverseSort;
+          };
+          //End omri's sort code
+
           if (attrs.iconExpand == null) {
             attrs.iconExpand = 'icon-plus  glyphicon glyphicon-plus  fa fa-plus';
           }
