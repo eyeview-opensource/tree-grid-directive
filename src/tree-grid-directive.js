@@ -5,7 +5,7 @@
   module = angular.module('treeGrid', []);
 
   module.directive('treeGrid', [
-    '$timeout', function($timeout) {
+    '$timeout', '$filter', function($timeout, $filter) {
       return {
         restrict: 'E',
         templateUrl:'tree-grid-template.html',
