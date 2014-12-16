@@ -58,11 +58,10 @@
           };
 
           //Start omri's sort code
-          scope.orderByField = 'branch.name';
           scope.reverseSort = false;
           scope.setOrder = function (value) {
-              scope.orderByField = 'branch.' + value;
               scope.reverseSort = !scope.reverseSort;
+              scope.treeData = $filter('orderBy')(scope.treeData, value, scope.reverseSort);
           };
           //End omri's sort code
 
