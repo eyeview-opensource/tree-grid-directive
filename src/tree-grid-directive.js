@@ -61,6 +61,7 @@
           scope.reverseSort = false;
           scope.setOrder = function (value) {
               scope.reverseSort = !scope.reverseSort;
+              _.each(scope.treeData, function(item){item.expanded = false;})
               scope.treeData = $filter('orderBy')(scope.treeData, value, scope.reverseSort);
           };
           //End omri's sort code
