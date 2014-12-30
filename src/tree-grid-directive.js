@@ -45,6 +45,7 @@
           action: '&',
           levelOneAction: '&',
           updateRowStatus: '&',
+          openPlacementEndedModal: '&',
           campaignStatus: '='
         },
         link: function(scope, element, attrs) {
