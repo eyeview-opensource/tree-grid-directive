@@ -44,8 +44,8 @@
           canLoad: '=',
           action: '&',
           levelOneAction: '&',
-          calculateCampaignStatus: '&',
-          calculatePlacementStatus: '&',
+          updateRowStatus: '&',
+          openPlacementEndedModal: '&',
           campaignStatus: '='
         },
         link: function(scope, element, attrs) {
@@ -93,12 +93,12 @@
               return;
             }
           }
-          if(attrs.expandOn){            
+          if(attrs.expandOn){
             expandingProperty = scope.expandOn;
             scope.expandingProperty = scope.expandOn;
           }
           else{
-            var _firstRow = scope.treeData[0], 
+            var _firstRow = scope.treeData[0],
                 _keys = Object.keys(_firstRow);
             for(var i =0, len = _keys.length; i<len; i++){
               if(typeof(_firstRow[_keys[i]])=='string'){
@@ -115,7 +115,7 @@
             for(var idx in _firstRow){
               if(_unwantedColumn.indexOf(idx)==-1)
                 _col_defs.push({field:idx});
-            }            
+            }
             scope.colDefinitions = _col_defs;
           }
           else{
@@ -275,8 +275,8 @@
               branch.level = level;
               scope.tree_rows.push({
                 level: level,
-                branch: branch,                
-                label: branch[expandingProperty],                
+                branch: branch,
+                label: branch[expandingProperty],
                 tree_icon: tree_icon,
                 visible: visible
               });
