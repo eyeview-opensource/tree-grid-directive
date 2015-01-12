@@ -73,7 +73,7 @@
             attrs.iconCollapse = 'icon-minus glyphicon glyphicon-minus fa fa-minus';
           }
           if (attrs.iconLeaf == null) {
-            attrs.iconLeaf = 'icon-file  glyphicon glyphicon-file  fa fa-file';
+            attrs.iconLeaf = '';
           }
           if (attrs.expandLevel == null) {
             attrs.expandLevel = '3';
