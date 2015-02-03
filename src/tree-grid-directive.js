@@ -50,7 +50,9 @@
           openPlacementEndedModal: '&',
           campaignStatus: '=',
           advertiserId: '@',
-          setAdvertiser: '&'
+          setAdvertiser: '&',
+          filter: '=',
+          selectedStatus: '='
         },
         link: function(scope, element, attrs, ctrl) {
 
