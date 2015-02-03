@@ -46,6 +46,7 @@
           action: '&',
           levelOneAction: '&',
           updateRowStatus: '&',
+          updateFilter: '&',
           openPlacementEndedModal: '&',
           campaignStatus: '=',
           advertiserId: '@'
