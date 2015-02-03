@@ -49,7 +49,8 @@
           updateFilter: '&',
           openPlacementEndedModal: '&',
           campaignStatus: '=',
-          advertiserId: '@'
+          advertiserId: '@',
+          setAdvertiser: '&'
         },
         link: function(scope, element, attrs, ctrl) {
 
