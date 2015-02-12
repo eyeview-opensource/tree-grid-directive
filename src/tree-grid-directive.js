@@ -46,6 +46,7 @@
           levelOneAction: '&',
           updateRowStatus: '&',
           openPlacementEndedModal: '&',
+          goToAddCreativePage: '&',
           campaignStatus: '=',
           advertiserId: '@'
         },
