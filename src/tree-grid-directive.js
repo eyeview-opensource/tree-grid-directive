@@ -84,10 +84,10 @@
           //End omri's sort code
 
           if (attrs.iconExpand == null) {
-            attrs.iconExpand = 'icon-plus  glyphicon glyphicon-plus  fa fa-plus';
+            attrs.iconExpand = '';
           }
           if (attrs.iconCollapse == null) {
-            attrs.iconCollapse = 'icon-minus glyphicon glyphicon-minus fa fa-minus';
+            attrs.iconCollapse = '';
           }
           if (attrs.iconLeaf == null) {
             attrs.iconLeaf = '';
@@ -330,8 +330,10 @@
           }
           n = scope.treeData.length;
           for_each_branch(function(b, level) {
-            b.level = level;
-            return b.expanded = b.level < expand_level;
+            if (!b.expanded) {
+                b.level = level;
+                return b.expanded = b.level < expand_level;
+            }
           });
           if (scope.treeControl != null) {
             if (angular.isObject(scope.treeControl)) {
