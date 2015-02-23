@@ -49,6 +49,7 @@
           updateFilter: '&',
           openPlacementEndedModal: '&',
           goToAddCreativePage: '&',
+          editCampaign: '&',
           campaignStatus: '=',
           advertiserId: '@',
           setAdvertiser: '&',
