@@ -37,23 +37,12 @@
         require: 'ngModel',
         scope: {
           treeData: '=',
-          colDefs:'=',
-          expandOn:'=',
+          colDefs: '=',
+          expandOn: '=',
           onSelect: '&',
           initialSelection: '@',
           treeControl: '=',
-          canLoad: '=',
-          action: '&',
-          levelOneAction: '&',
-          updateRowStatus: '&',
-          updateFilter: '&',
-          openPlacementEndedModal: '&',
-          goToAddCreativePage: '&',
-          campaignStatus: '=',
-          advertiserId: '@',
-          setAdvertiser: '&',
-          filter: '=',
-          selectedStatus: '='
+          treeFunctions: '='
         },
         link: function(scope, element, attrs, ctrl) {
 
