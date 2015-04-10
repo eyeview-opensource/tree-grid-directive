@@ -65,7 +65,16 @@
 
           //Start omri's sort code
           scope.reverseSort = false;
-          scope.setOrder = function (col) {
+          scope.setOrder = function (col, isSubColumn) {
+              // Don't sort on columns that span multiple colSpans, except for when it's a subcolumn
+              if ((col.colSpan && col.colSpan > 1 && !isSubColumn)){
+                return;
+              }
+              // If it is a subcolumn, make sure it has a display name
+              if (isSubColumn && !col.subMenuDisplayName){
+                return;
+              }
+
               var sortField = col.sortField || col.field;
               scope.reverseSort = !scope.reverseSort;
               _.each(scope.treeData, function(item){item.expanded = false;});
