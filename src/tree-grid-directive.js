@@ -65,10 +65,11 @@
 
           //Start omri's sort code
           scope.reverseSort = false;
-          scope.setOrder = function (value) {
+          scope.setOrder = function (col) {
+              var sortField = col.sortField || col.field;
               scope.reverseSort = !scope.reverseSort;
               _.each(scope.treeData, function(item){item.expanded = false;});
-              scope.treeData = $filter('orderBy')(scope.treeData, value, scope.reverseSort);
+              scope.treeData = $filter('orderBy')(scope.treeData, sortField, scope.reverseSort);
           };
           //End omri's sort code
 
