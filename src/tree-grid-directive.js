@@ -38,6 +38,7 @@
         scope: {
           treeData: '=',
           colDefs: '=',
+          sortDetails: '=',
           expandOn: '=',
           onSelect: '&',
           initialSelection: '@',
@@ -79,6 +80,9 @@
               scope.reverseSort = !scope.reverseSort;
               _.each(scope.treeData, function(item){item.expanded = false;});
               scope.treeData = $filter('orderBy')(scope.treeData, sortField, scope.reverseSort);
+              if (scope.sortDetails) {
+                  scope.sortDetails = {sortField: sortField, desc: scope.reverseSort};
+              }
           };
           //End omri's sort code
 
